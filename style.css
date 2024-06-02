@@ -1,0 +1,587 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+body{
+    width: 100%;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+h4{
+    font-size: 20px;
+    color: #222;
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: black;
+    background-color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+button.white{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: white;
+    background-color:transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.2s;
+}
+/* Phần Header */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: antiquewhite;
+     box-shadow: 0 5px 15px rgb(156, 157, 150);  
+     z-index: 999;
+     position: sticky;
+     top: 0;
+     left: 0;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;   /*Loại bỏ các đường gạch chân */
+    font-weight: 600;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: aqua;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: aqua;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#mobile {
+    display: none;
+    align-items: center;
+}
+#close{
+    display: none;
+}
+/*Phần content*/
+#content{
+    background: url(/img/hero4.png);
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position:  top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#content h4{
+    padding-bottom: 15px;
+}
+#content h1{
+    color: rgb(97, 200, 166);
+}
+#content button{
+    background-image: url(/img/button.png);
+    border: 0;
+    color:rgb(97, 200, 166);
+    background-color: transparent;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+#feature{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#feature .fe-box{
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 6px;
+    
+}
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#feature .fe-box:hover{
+    box-shadow: 0 5px 30px rgba(102, 217, 248, 0.5);
+}
+#feature .fe-box h6{
+    padding:  8px 5px;
+    line-height: 1;
+    border-radius: 6px;
+    color: green;
+    background-color: pink;
+    text-align: center;
+    cursor: pointer;
+}
+#feature .fe-box:nth-child(2) h6{
+    background-color: rgb(192, 247, 110);
+}
+#feature .fe-box:nth-child(3) h6{
+    background-color: rgb(92, 174, 246);
+}
+#feature .fe-box:nth-child(4) h6{
+    background-color: rgb(244, 244, 140);
+}
+#feature .fe-box:nth-child(5) h6{
+    background-color: rgb(247, 209, 153);
+}
+#feature .fe-box:nth-child(6) h6{
+    background-color: rgb(252, 116, 127);
+}
+/* Phần Sản phẩm 1 */
+#product-one{
+    text-align: center;
+}
+#product-one .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#product-one .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0,0,0.2);
+    margin: 15px 0;
+    position: relative;
+}
+#product-one .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product-one .pro .pro-text{
+    text-align: start;
+    padding: 10px 0;
+}
+#product-one .pro .pro-text span{
+    color: #606063;
+    font-size: 14px;
+}
+#product-one .pro .pro-text h5{
+    padding-top:7px;
+    color: #1a1a1a;
+    font-size: 20px;
+}
+#product-one .pro .pro-text i{
+    color: yellow;
+    font-size: 12px;
+}
+#product-one .pro .pro-text h4{
+    padding-top: 7px;
+    font-size: 22px;
+    color: red;
+}
+#product-one .pro .cart{
+    width: 40px;
+    height: 40px;
+    background-color: #e8f6ea;
+    line-height: 40px;
+    border-radius: 50px;
+    color: green;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+/* Phần Banner */
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/banner/b2.jpg");
+    width: 100%;
+    height: 40vh;
+}
+#banner h4, #banner h2{
+    color: white;
+    padding-top: 20px;
+}
+#banner span{
+    color: red;
+}
+#banner button:hover{
+    background-color: rgb(28, 176, 245);
+    color: white;
+}
+/* Phần Banner 2 */
+#banner-two{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#banner-two .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-image: url("img/banner/b17.jpg");
+    width: 49%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+#banner-two .box2{
+    background-image: url(img/banner/b10.jpg);
+}
+#banner-two h4{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+#banner-two h2{
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+}
+#banner-two span{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#banner-two .banner-box:hover button{
+    background-color: rgb(23, 145, 149);
+}
+/* Banner 3 */
+#banner-three{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+#banner-three .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-image: url("img/banner/b7.jpg");
+    width: 32%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+#banner-three .box2{
+    background-image: url("img/banner/b4.jpg");
+}
+#banner-three .box3{
+    background-image: url("img/banner/b18.jpg");
+}
+#banner-three h2{
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+}
+#banner-three h3{
+    color: rgb(243, 73, 73);
+    font-weight: 700;
+    font-size: 18px;
+}
+/*Banner 4*/
+#banner-four{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("img/banner/b14.png");
+    background-color: #041e42;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    height: 30vh;
+    padding: 0 70px;
+}
+#banner-four h4{
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+}
+#banner-four p{
+    color: rgb(94, 74, 74);
+    font-weight: 600;
+    font-size: 18px;
+}
+#banner-four .form{
+    display: flex;
+    width: 40%  ;
+}
+#banner-four input{
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border: none;
+}
+#banner-four button{
+    background-color: rgb(14, 163, 163);
+    color: white;
+    border: none;
+}
+/*Footer*/
+footer{
+    display: flex;
+    justify-content: space-between  ;
+}
+/* Phần Reponsive */
+@media screen and (max-width:799px){
+    .section-p1{
+        padding: 40px 40px;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color:antiquewhite;
+        box-shadow: 0 5px 15px rgb(156, 157, 150); 
+        padding: 80px 0 0 10px;  
+        transition: 0.5s; 
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #navbar.active{
+        right: 0px;
+    }
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close{
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: black;
+        font-size: 24px;
+    }
+    #lg-bag{
+        display: none;
+    }
+    #content{
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+    #feature{
+       justify-content: center;
+    }
+    #feature .fe-box{
+        margin: 15px;
+    }
+    #product-one .pro-container{
+        justify-content: center;
+    }
+    #product-one .pro{
+        margin: 15px;
+    }
+    #banner{
+        height: 20px;
+    }
+    #banner-two .banner-box{
+        min-width: 100%;
+        height: 30vh;
+        background-size: cover;
+    }
+    #banner-three{
+        padding: 0 40px;
+    }
+    #banner-four .form{
+        width: 70%;
+    }
+
+}
+@media screen and (max-width: 477px) {
+    .section-p1{
+        padding: 20px ;
+    }
+    #header{
+        padding: 10px 30px;
+    }
+    h1{
+        font-size: 38px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    #content{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+    #banner{
+        height: 50vh;
+    }
+    #banner-three{
+        padding: 0 20px;
+    }
+    #banner-three .banner-box{
+        width: 100%;
+    }
+    #banner-four .form{
+        width: 100%;
+    }
+    /*Chi tiết sp*/
+    #pro-detail{
+        display: flex;
+        flex-direction: column;  
+    }
+    #pro-detail .pro-img{
+        width: 100%;
+        margin-right: 0px;
+    }
+    #pro-detail .text-pro{
+        width: 100%;
+    }
+}
+/*Shop-page*/
+#page-header{
+    background-image: url(img/banner/b1.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#page-header h2,
+#page-header p{
+    color: white;
+}
+#next{
+    text-align: center;
+}
+#next a{
+    text-decoration: none;
+    background-color: aqua;
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+#next a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+/*Chi tiết sản phẩm*/
+#pro-detail{
+    display: flex;
+    margin-top: 20px;
+}
+#pro-detail .pro-img{
+    width: 40%;
+    margin-right: 50px;
+}
+.small-group{
+    display: flex;
+    justify-content: space-between;
+}
+.small-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+#pro-detail .text-pro{
+   width: 50%;
+   padding-top: 30px;
+}
+#pro-detail .text-pro h4{
+    padding: 40px 0 20px 0;
+}
+#pro-detail .text-pro h2{
+    font-size: 26px;
+}
+#pro-detail .text-pro select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+} 
+#pro-detail .text-pro input{
+    width: 50%;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#pro-detail .text-pro input:focus{
+    outline: none;
+}
+#pro-detail .text-pro button{
+    background-color: greenyellow;
+    color: white;
+}
+#pro-detail .text-pro span{
+    line-height: 25px;
+}
